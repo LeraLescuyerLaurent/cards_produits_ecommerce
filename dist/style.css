@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #131313;
+}
+.container-cards-ecommerce-un{
+    position: relative;
+}
+.container-cards-ecommerce-un .card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background-color: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.container-cards-ecommerce-un .card:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;height: 100%;
+    background-color: #9bdc28;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.container-cards-ecommerce-un .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.container-cards-ecommerce-un .card:after{
+    content:"Nike";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+.container-cards-ecommerce-un .card .imageBox{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.container-cards-ecommerce-un .card:hover .imageBox{
+    top: 0%;
+    transform: translateY(0%);
+}
+.container-cards-ecommerce-un .imageBox img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 270px;
+}
+.container-cards-ecommerce-un .card .contentBox{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container-cards-ecommerce-un .card:hover .contentBox{
+    height: 210px;
+}
+.container-cards-ecommerce-un .contentBox h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.container-cards-ecommerce-un .contentBox .size,
+.container-cards-ecommerce-un .contentBox .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container-cards-ecommerce-un .size h3,
+.container-cards-ecommerce-un .color h3{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container-cards-ecommerce-un .card:hover .contentBox .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container-cards-ecommerce-un .card:hover .contentBox .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+.container-cards-ecommerce-un .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container-cards-ecommerce-un .size span:hover{
+    background-color: #9bdc28;
+}
+
+.container-cards-ecommerce-un .color span{
+    width: 20px;
+    height: 20px;
+    background-color: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.container-cards-ecommerce-un .color span:nth-child(3){
+    background-color: #03a9f4;
+}
+.container-cards-ecommerce-un .color span:nth-child(4){
+    background-color: #e91e63;
+}
+.container-cards-ecommerce-un .contentBox a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translate(50px);
+    transition: 0.5s;
+}
+.container-cards-ecommerce-un .card:hover .contentBox a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
